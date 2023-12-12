@@ -90,7 +90,7 @@ def get_snippet(sentence_df, prop):
             while annot_end > sentence_df['end'][ind_sent]:
                 snippet = snippet + " " + sentence_df['text'][ind_sent]
                 ind_sent += 1
-            snippet = snippet + " " + sentence_df['text'][ind_sent + 1]
+            snippet = snippet + " " + sentence_df['text'][ind_sent]
     
     snippet = re.sub('\r', '', snippet)
     snippet = re.sub('\n', ' ', snippet)
